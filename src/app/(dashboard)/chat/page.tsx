@@ -203,8 +203,8 @@ export default function ChatPage() {
                 key={conv.other_user_id}
                 onClick={() => { setActiveConv(conv); setMobileView('chat') }}
                 style={{ width: '100%', display: 'flex', alignItems: 'center', gap: 12, padding: '14px 20px', textAlign: 'left', border: 'none', cursor: 'pointer', backgroundColor: isActive ? 'var(--primary-light)' : 'transparent', borderLeft: isActive ? '3px solid var(--primary)' : '3px solid transparent', transition: 'all 0.15s' }}
-                onMouseEnter={(e: any) => { if (!isActive) (e.currentTarget as HTMLElement).style.backgroundColor = 'var(--surface-container)' }}
-                onMouseLeave={(e: any) => { if (!isActive) (e.currentTarget as HTMLElement).style.backgroundColor = 'transparent' }}
+                onMouseEnter={(e) => { if (!isActive) (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'var(--surface-container)' }}
+                onMouseLeave={(e) => { if (!isActive) (e.currentTarget as HTMLButtonElement).style.backgroundColor = 'transparent' }}
               >
                 <div style={{ position: 'relative', flexShrink: 0 }}>
                   <Avatar user={conv.other_user} size={44} />
