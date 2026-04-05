@@ -5,9 +5,6 @@ const nextConfig: NextConfig = {
     // Type errors are caught in development - don't block production builds
     ignoreBuildErrors: true,
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
   images: {
     remotePatterns: [
       { protocol: 'https', hostname: 'images.unsplash.com' },
